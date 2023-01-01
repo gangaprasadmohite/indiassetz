@@ -32,7 +32,7 @@ const Navbar = () => {
           }}
         />
         <TextField
-          label="Search Clients, Properties, Services"
+          placeholder="Search Clients, Properties, Services"
           id="outlined-basic"
           sx={{
             background: 'white',
