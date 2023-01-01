@@ -24,8 +24,6 @@ import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
 import logo from '../assets/Indiassetz.png';
 const drawerWidth = 240;
 
-console.log(logo);
-
 function Sidebar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -35,7 +33,7 @@ function Sidebar(props) {
   };
 
   const drawer = (
-    <div style={{ borderRadius: '10px' }}>
+    <div>
       <Toolbar>
         <Box
           component="img"
@@ -57,16 +55,6 @@ function Sidebar(props) {
         }}
       >
         <List>
-          {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))} */}
           <ListItem sx={{ color: 'rgba(10, 58, 103, 0.4)' }} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -190,7 +178,7 @@ function Sidebar(props) {
       component="nav"
       sx={{
         width: { sm: drawerWidth },
-        flexShrink: { sm: 0 },
+        // flexShrink: { sm: 0 },
         borderRadius: '0px 40px 40px 0px',
       }}
       aria-label="mailbox folders"
@@ -204,26 +192,26 @@ function Sidebar(props) {
       >
         <MenuIcon />
       </IconButton>
-      <Drawer
-        container={container}
-        variant="temporary"
-        open={mobileOpen}
-        onClose={handleDrawerToggle}
-        ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
-        }}
-        sx={{
-          display: { xs: 'block', sm: 'none' },
-          '& .MuiDrawer-paper': {
-            boxSizing: 'border-box',
-            width: drawerWidth,
-          },
-          background: '#0A3A67',
-          color: 'black',
-        }}
-      >
-        {drawer}
-      </Drawer>
+      {/* <Drawer
+				container={container}
+				variant="temporary"
+				open={mobileOpen}
+				onClose={handleDrawerToggle}
+				ModalProps={{
+					keepMounted: true, // Better open performance on mobile.
+				}}
+				sx={{
+					display: { xs: "block", sm: "none" },
+					"& .MuiDrawer-paper": {
+						boxSizing: "border-box",
+						width: drawerWidth,
+					},
+					// backgroundColor: "#0A3A67",
+					color: "black",
+				}}
+			>
+				{drawer}
+			</Drawer> */}
       <Drawer
         variant="permanent"
         sx={{
@@ -231,6 +219,7 @@ function Sidebar(props) {
           '& .MuiDrawer-paper': {
             boxSizing: 'border-box',
             width: drawerWidth,
+            borderRadius: '0px 40px 40px 0px',
           },
         }}
         open

@@ -169,7 +169,6 @@ const ClientListPage = () => {
   return (
     <React.Fragment>
       <Navbar />
-      {console.log(rows)}
       <Box
         sx={{
           background: 'white',
@@ -331,7 +330,7 @@ const ClientListPage = () => {
           pageSize={50}
           height={100}
           rowsPerPageOptions={[5]}
-          sx={{ borderRadius: '20px' }}
+          sx={{ borderRadius: '20px', background: 'white' }}
           checkboxSelection
           disableSelectionOnClick
           experimentalFeatures={{ newEditingApi: true }}
