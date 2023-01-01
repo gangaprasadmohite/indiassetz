@@ -20,3 +20,12 @@
 .read-the-docs {
   color: #888;
 }
+
+.MuiDataGrid-columnHeaderTitleContainer {
+  background-color: #0a3a67;
+  color: white;
+}
+
+.MuiDataGrid-iconSeparator {
+  display: none;
+}

@@ -217,8 +217,9 @@ function Sidebar(props) {
           '& .MuiDrawer-paper': {
             boxSizing: 'border-box',
             width: drawerWidth,
-            borderTopRightRadius: '5px',
           },
+          background: '#0A3A67',
+          color: 'black',
         }}
       >
         {drawer}

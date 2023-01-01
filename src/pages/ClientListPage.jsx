@@ -9,33 +9,47 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const ClientListPage = () => {
   const columns = [
-    { field: 'name', headerName: 'Name', width: 90 },
+    {
+      field: 'name',
+      headerName: 'Name',
+      headerClassName: 'blueish-color',
+      width: 200,
+    },
     {
       field: 'type',
+      headerClassName: 'blueish-color',
       headerName: 'Type',
-      width: 150,
+      width: 100,
     },
     {
       field: 'email',
       headerName: 'Email',
+      headerClassName: 'blueish-color',
       width: 150,
     },
     {
       field: 'valuation',
       headerName: 'Valuation',
+      headerClassName: 'blueish-color',
       width: 110,
     },
     {
       field: 'contact',
       headerName: 'Contact',
+      headerClassName: 'blueish-color',
+      width: 200,
     },
     {
       field: 'branch',
       headerName: 'Branch',
+      headerClassName: 'blueish-color',
+      width: 150,
     },
     {
       field: 'prm',
       headerName: 'PRM',
+      headerClassName: 'blueish-color',
+      width: 140,
     },
   ];
   const rows = [
@@ -47,168 +61,115 @@ const ClientListPage = () => {
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: 'Nandini',
     },
     {
-      id: 1,
+      id: 2,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
     {
-      id: 1,
+      id: 3,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
     {
-      id: 1,
+      id: 4,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
     {
-      id: 1,
+      id: 5,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
     {
-      id: 1,
+      id: 6,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
     {
-      id: 1,
+      id: 7,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
 
     {
-      id: 1,
+      id: 8,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
     {
-      id: 1,
+      id: 9,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
     {
-      id: 1,
+      id: 10,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
     {
-      id: 1,
+      id: 11,
       name: 1,
       type: 'Snow',
       email: 'Jon',
       valuation: 35,
       contact: '91-8888888888',
       branch: 'Bangalore',
-      prm: `${(
-        <Button>
-          Nandini
-          <KeyboardArrowDownIcon />
-        </Button>
-      )}`,
+      prm: '',
     },
   ];
+
   return (
     <React.Fragment>
       <Navbar />
+      {console.log(rows)}
       <Box
         sx={{
           background: 'white',
@@ -261,6 +222,7 @@ const ClientListPage = () => {
         <Grid
           item
           lg={2.4}
+          sm={4}
           sx={{
             textAlign: 'center',
             marginTop: '0.48rem',
@@ -275,6 +237,7 @@ const ClientListPage = () => {
         <Grid
           item
           lg={2.4}
+          sm={4}
           sx={{
             textAlign: 'center',
             marginTop: '0.48rem',
@@ -290,6 +253,7 @@ const ClientListPage = () => {
         <Grid
           item
           lg={2.4}
+          sm={4}
           sx={{
             textAlign: 'center',
             marginTop: '0.48rem',
@@ -304,6 +268,7 @@ const ClientListPage = () => {
         <Grid
           item
           lg={2.4}
+          sm={4}
           sx={{
             textAlign: 'center',
             marginTop: '0.48rem',
@@ -318,6 +283,7 @@ const ClientListPage = () => {
         <Grid
           item
           lg={2.4}
+          sm={4}
           sx={{
             textAlign: 'center',
             marginTop: '0.48rem',
@@ -348,18 +314,24 @@ const ClientListPage = () => {
       <Box
         sx={{
           width: '1100px',
+          '& .blueish-color': {
+            backgroundColor: '#0A3A67',
+          },
+          flexGrow: '1',
           marginRight: '50px',
           marginLeft: '50px',
           marginTop: '1.25rem',
-          borderRadius: '10px',
+          borderRadius: '20px',
+          height: '100%',
         }}
       >
         <DataGrid
           rows={rows}
           columns={columns}
-          pageSize={5}
-          height={500}
+          pageSize={50}
+          height={100}
           rowsPerPageOptions={[5]}
+          sx={{ borderRadius: '20px' }}
           checkboxSelection
           disableSelectionOnClick
           experimentalFeatures={{ newEditingApi: true }}
