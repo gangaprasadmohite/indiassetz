@@ -77,7 +77,6 @@ const PropertyDetails = () => {
           paddingTop: '1rem',
           paddingBottom: '1rem',
           background: 'white',
-          color: 'beige',
           display: 'flex',
           justifyContent: 'space-between',
           color: '#0A3A67',
