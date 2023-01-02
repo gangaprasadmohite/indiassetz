@@ -89,7 +89,7 @@ const ClientDetailsPage = () => {
             </Button>
             <Button
               sx={{
-                background: '#white',
+                background: 'white',
                 marginLeft: '1rem',
                 marginRight: '1.5rem',
                 color: '#0A3A67',

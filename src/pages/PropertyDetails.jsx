@@ -1,11 +1,73 @@
 import React from 'react';
-import { Box, Typography, Button, Grid, TextField } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Button,
+  Grid,
+  TextField,
+  TableBody,
+  TableCell,
+  TableRow,
+  TableContainer,
+  Paper,
+  Table,
+  TableHead,
+} from '@mui/material';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import BorderColorRoundedIcon from '@mui/icons-material/BorderColorRounded';
 import addApt from '../assets/addApt.png';
 import image from '../assets/progress.png';
+import avatar from '../assets/avatar.jpg';
+import progressBar from '../assets/progressBar.png';
 
 const PropertyDetails = () => {
+  function createData1(name, calories, fat, carbs, protein, carbo, hello) {
+    return { name, calories, fat, carbs, protein, carbo, hello };
+  }
+  const tableOneRows = [
+    createData1(
+      'Q1235-45',
+      'Karthik J',
+      '11223311',
+      'Buy',
+      '14-10-2022 10:30',
+      'Saumya',
+      'Order Placed'
+    ),
+    createData1(
+      'Q1235-45',
+      'Karthik J',
+      '11223311',
+      'Buy',
+      '14-10-2022 10:30',
+      'Saumya',
+      'Order Placed'
+    ),
+  ];
+  function createData2(name, calories, fat, carbs, protein, carbo, hello) {
+    return { name, calories, fat, carbs, protein, carbo, hello };
+  }
+
+  const tableTwoRows = [
+    createData2(
+      'Q1235-45',
+      'Karthik J',
+      '11223311',
+      'Buy',
+      '14-10-2022 10:30',
+      'Saumya',
+      'Closed'
+    ),
+    createData2(
+      'Q1235-45',
+      'Karthik J',
+      '11223311',
+      'Buy',
+      '14-10-2022 10:30',
+      'Saumya',
+      'Closed'
+    ),
+  ];
   return (
     <React.Fragment>
       <div
@@ -353,6 +415,349 @@ const PropertyDetails = () => {
           multiline
           rows={4}
         ></TextField>
+        <div
+          style={{
+            // paddingRight: '1rem',
+            // paddingLeft: '1rem',
+            marginTop: '2rem',
+            display: 'flex',
+            justifyContent: 'space-between',
+            background: '#0A3A67',
+            borderTopLeftRadius: '10px',
+            borderTopRightRadius: '10px',
+            padding: '0.5rem',
+          }}
+        >
+          <Typography sx={{ fontSize: '1.25rem' }}>Documents</Typography>
+        </div>
+        <Box sx={{ textAlign: 'center' }}>
+          <img src={progressBar} style={{ width: '95%', margin: '0 auto' }} />
+          <Grid container spacing={2}>
+            <Grid item lg={3}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  textAlign: 'start',
+                  marginLeft: '1rem',
+                }}
+              >
+                <img
+                  src={avatar}
+                  style={{ width: '10%', borderRadius: '50%' }}
+                />
+                <div style={{ paddingLeft: '0.5rem' }}>
+                  <Typography sx={{ color: 'rgba(10, 58, 103, 0.4)' }}>
+                    Uploaded by
+                  </Typography>
+                  <Typography sx={{ color: '#0A3A67' }}>Nalini</Typography>
+                </div>
+              </div>
+            </Grid>
+            <Grid item lg={3}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  textAlign: 'start',
+                  marginLeft: '1rem',
+                }}
+              >
+                <div style={{ paddingLeft: '0.5rem' }}>
+                  <Typography sx={{ color: 'rgba(10, 58, 103, 0.4)' }}>
+                    Uploaded on
+                  </Typography>
+                  <Typography sx={{ color: '#0A3A67' }}>
+                    13.11.2022 11:30am
+                  </Typography>
+                </div>
+              </div>
+            </Grid>
+            <Grid item lg={3}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  textAlign: 'start',
+                  marginLeft: '1rem',
+                }}
+              >
+                <div style={{ paddingLeft: '0.5rem' }}>
+                  <Typography sx={{ color: 'rgba(10, 58, 103, 0.4)' }}>
+                    Last update
+                  </Typography>
+                  <Typography sx={{ color: '#0A3A67' }}>
+                    02.12.2022 11:30am
+                  </Typography>
+                </div>
+              </div>
+            </Grid>
+            <Grid item lg={3}>
+              <Button
+                sx={{
+                  background: 'white',
+                  marginLeft: '1rem',
+                  marginRight: '1.5rem',
+                  color: '#0A3A67',
+                  border: '1px solid rgba(10, 58, 103, 0.4)',
+                  padding: '0.6rem 1.1rem',
+                }}
+              >
+                View Orders
+              </Button>
+            </Grid>
+          </Grid>
+        </Box>
+        <div
+          style={{
+            // paddingRight: '1rem',
+            // paddingLeft: '1rem',
+            marginTop: '2rem',
+            display: 'flex',
+            justifyContent: 'space-between',
+            background: '#0A3A67',
+            borderTopLeftRadius: '10px',
+            borderTopRightRadius: '10px',
+            padding: '0.5rem',
+          }}
+        >
+          <Typography sx={{ fontSize: '1.25rem' }}>Open Orders</Typography>
+          <Typography sx={{ textDecoration: 'underline' }}>ViewAll</Typography>
+        </div>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                >
+                  Client ID
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Name
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Order ID
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Order
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Date & Time
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  RM
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Status
+                </TableCell>
+
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                ></TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {tableOneRows.map((tableOneRow) => (
+                <TableRow
+                  key={tableOneRow.name}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {tableOneRow.name}
+                  </TableCell>
+                  <TableCell align="right">{tableOneRow.calories}</TableCell>
+                  <TableCell align="right">{tableOneRow.fat}</TableCell>
+                  <TableCell align="right">{tableOneRow.carbs}</TableCell>
+                  <TableCell align="right">{tableOneRow.protein}</TableCell>
+                  <TableCell align="right">{tableOneRow.carbo}</TableCell>
+                  <TableCell align="right">{tableOneRow.hello}</TableCell>
+
+                  <TableCell align="right">
+                    {
+                      <Button
+                        sx={{
+                          color: '#0A3A67',
+                          border: '1px solid rgba(10, 58, 103, 0.4);',
+                        }}
+                      >
+                        View Property
+                      </Button>
+                    }
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        <div
+          style={{
+            // paddingRight: '1rem',
+            // paddingLeft: '1rem',
+            display: 'flex',
+            marginTop: '2rem',
+            justifyContent: 'space-between',
+            background: '#0A3A67',
+            borderTopLeftRadius: '10px',
+            borderTopRightRadius: '10px',
+            padding: '0.5rem',
+          }}
+        >
+          <Typography sx={{ fontSize: '1.25rem' }}>Closed Orders</Typography>
+          <Typography sx={{ textDecoration: 'underline' }}>ViewAll</Typography>
+        </div>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                >
+                  Client ID
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Name
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Order ID
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Order
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Date & Time
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  RM
+                </TableCell>
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                >
+                  Status
+                </TableCell>
+
+                <TableCell
+                  sx={{
+                    background: 'rgba(10, 58, 103, 0.6);',
+                    color: 'white',
+                  }}
+                  align="right"
+                ></TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {tableTwoRows.map((tableTwoRow) => (
+                <TableRow
+                  key={tableTwoRow.name}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {tableTwoRow.name}
+                  </TableCell>
+                  <TableCell align="right">{tableTwoRow.calories}</TableCell>
+                  <TableCell align="right">{tableTwoRow.fat}</TableCell>
+                  <TableCell align="right">{tableTwoRow.carbs}</TableCell>
+                  <TableCell align="right">{tableTwoRow.protein}</TableCell>
+                  <TableCell align="right">{tableTwoRow.carbo}</TableCell>
+                  <TableCell align="right">{tableTwoRow.hello}</TableCell>
+
+                  <TableCell align="right">
+                    {
+                      <Button
+                        sx={{
+                          color: '#0A3A67',
+                          border: '1px solid rgba(10, 58, 103, 0.4);',
+                        }}
+                      >
+                        View Property
+                      </Button>
+                    }
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
       </Box>
     </React.Fragment>
   );
