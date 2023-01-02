@@ -154,19 +154,6 @@ function Sidebar(props) {
           </ListItem>
         </List>
       </div>
-
-      {/* <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List> */}
     </div>
   );
 
@@ -188,30 +175,40 @@ function Sidebar(props) {
         aria-label="open drawer"
         edge="start"
         onClick={handleDrawerToggle}
-        sx={{ mr: 2, display: { sm: 'none' } }}
+        sx={{
+          mr: 2,
+          display: {
+            sm: 'none',
+            lg: 'block',
+            position: 'absolute',
+            top: '1rem',
+            left: '1rem',
+          },
+          color: '#0A3A67',
+        }}
       >
         <MenuIcon />
       </IconButton>
-      {/* <Drawer
-				container={container}
-				variant="temporary"
-				open={mobileOpen}
-				onClose={handleDrawerToggle}
-				ModalProps={{
-					keepMounted: true, // Better open performance on mobile.
-				}}
-				sx={{
-					display: { xs: "block", sm: "none" },
-					"& .MuiDrawer-paper": {
-						boxSizing: "border-box",
-						width: drawerWidth,
-					},
-					// backgroundColor: "#0A3A67",
-					color: "black",
-				}}
-			>
-				{drawer}
-			</Drawer> */}
+      <Drawer
+        container={container}
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
+        sx={{
+          display: { xs: 'block', sm: 'none' },
+          '& .MuiDrawer-paper': {
+            boxSizing: 'border-box',
+            width: drawerWidth,
+          },
+          // backgroundColor: "#0A3A67",
+          color: 'black',
+        }}
+      >
+        {drawer}
+      </Drawer>
       <Drawer
         variant="permanent"
         sx={{

@@ -89,7 +89,7 @@ const ClientDetailsPage = () => {
             </Button>
             <Button
               sx={{
-                background: '#white',
+                background: 'white',
                 marginLeft: '1rem',
                 marginRight: '1.5rem',
                 color: '#0A3A67',
@@ -113,11 +113,11 @@ const ClientDetailsPage = () => {
         >
           <Button sx={{ background: 'white', color: '#0A3A67' }}>
             <ShoppingCartRoundedIcon />
-            Filter
+            Cart
           </Button>
           <Button sx={{ background: 'white', color: '#0A3A67' }}>
             <BorderColorRoundedIcon />
-            Filter
+            Edit
           </Button>
         </div>
         <Box
