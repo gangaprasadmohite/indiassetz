@@ -113,11 +113,11 @@ const ClientDetailsPage = () => {
         >
           <Button sx={{ background: 'white', color: '#0A3A67' }}>
             <ShoppingCartRoundedIcon />
-            Filter
+            Cart
           </Button>
           <Button sx={{ background: 'white', color: '#0A3A67' }}>
             <BorderColorRoundedIcon />
-            Filter
+            Edit
           </Button>
         </div>
         <Box
